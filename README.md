@@ -2,7 +2,7 @@
 Postprocessing command "iir_filter"
 
 Usage example:
-`... | iir_filter`
+`... | iir_filter signal fs=100, lowcut=3, highcut=10, order=4`
 
 ## Getting started
 ###  Prerequisites
@@ -26,5 +26,5 @@ Use `pp` to test iir_filter command:
 pp
 Storage directory is /tmp/pp_cmd_test/storage
 Commmands directory is /tmp/pp_cmd_test/pp_cmd
-query: | otl_v1 <# makeresults count=100 #> |  iir_filter 
+query: | otl_v1 <# makeresults count=100 #> |  iir_filter signal fs=100, lowcut=3, highcut=10, order=4
 ```

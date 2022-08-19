@@ -5,7 +5,10 @@ from .filters import butter_bandpass_filter
 
 
 class IirFilterCommand(BaseCommand):
-    # define syntax of your command here
+    """
+    Filter data along one-dimension with Butterworth filter
+    iir_filter signal fs=100, lowcut=3, highcut=10, order=4
+    """
     syntax = Syntax(
         [
             Positional("signal", required=True, otl_type=OTLType.TEXT),
